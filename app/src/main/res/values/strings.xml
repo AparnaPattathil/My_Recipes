@@ -2,4 +2,6 @@
     <string name="app_name">My Recipes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">You have not added any recipes yet</string>
+    <string name="action_add">ADD</string>
+    <string name="action_save">SAVE</string>
 </resources>
