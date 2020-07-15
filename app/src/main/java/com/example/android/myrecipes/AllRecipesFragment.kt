@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.all_recipes_fragment.*
 
 class AllRecipesFragment : Fragment() {
 
@@ -23,6 +26,15 @@ class AllRecipesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val repository = RecipesRepository()
         factory = AllRecipesViewModelFactory(repository)
-        viewModel = ViewModelProvider(this).get(AllRecipesViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, factory).get(AllRecipesViewModel::class.java)
+        viewModel.fetchAllRecipes()
+        viewModel.recipes.observe(viewLifecycleOwner, Observer { recipes ->
+            recycler_view_recipes.also {
+                it.layoutManager = LinearLayoutManager(requireContext())
+                it.setHasFixedSize(true)
+                it.adapter = RecipesAdapter(recipes)
+            }
+
+        })
     }
 }
