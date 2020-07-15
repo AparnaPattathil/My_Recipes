@@ -9,5 +9,14 @@
         android:id="@+id/allRecipesFragment"
         android:name="com.example.android.myrecipes.AllRecipesFragment"
         android:label="all_recipes_fragment"
-        tools:layout="@layout/all_recipes_fragment" />
+        tools:layout="@layout/all_recipes_fragment" >
+        <action
+            android:id="@+id/action_allRecipesFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.example.android.myrecipes.AddRecipeFragment"
+        android:label="fragment_add_recipe"
+        tools:layout="@layout/fragment_add_recipe" />
 </navigation>
