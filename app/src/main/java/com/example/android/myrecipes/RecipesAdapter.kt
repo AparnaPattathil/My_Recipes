@@ -27,6 +27,6 @@ class RecipesAdapter(private val recipes: List<Recipe>) :
 
     inner class RecipesViewHolder(
         val recipeDetailsItemBinding: RecipeDetailsItemBinding
-    ) : RecyclerView.ViewHolder(recipeDetailsItemBinding.root) {
+    ) : RecyclerView.ViewHolder(recipeDetailsItemBinding.root){
     }
 }

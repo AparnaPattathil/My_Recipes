@@ -6,6 +6,10 @@
         <variable
             name="recipe"
             type="com.example.android.myrecipes.Recipe" />
+
+        <variable
+            name="image"
+            type="com.example.android.myrecipes.Image" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -21,13 +25,13 @@
                 android:id="@+id/recipe_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{recipe.name}"/>
+                android:text="@{recipe.name}" />
 
             <TextView
                 android:id="@+id/recipe_description"
                 android:layout_width="match_parent"
                 android:layout_height="95dp"
-                android:text="@{recipe.description}"/>
+                android:text="@{recipe.description}" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -37,7 +37,7 @@ class AllRecipesFragment : Fragment() {
             recycler_view_recipes.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
                 it.setHasFixedSize(true)
-                it.adapter = RecipesAdapter(recipes)
+                it.adapter = RecipesAdapter(MockData().recipes)
             }
 
         })

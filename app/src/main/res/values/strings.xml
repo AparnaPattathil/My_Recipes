@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">You have not added any recipes yet</string>
     <string name="action_add">ADD</string>
     <string name="action_save">SAVE</string>
+    <string name="recipe_name_label">Title:</string>
+    <string name="title_description_label">Description:</string>
 </resources>
